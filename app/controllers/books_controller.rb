@@ -7,4 +7,8 @@ class BooksController < ApplicationController
 
   def edit
   end
+  
+  def create
+    
+  end
 end

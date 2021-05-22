@@ -1,2 +1,41 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<body>
+  <p id="notice"><%= notice %></p>
+  <h1>Books</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>タイトル</td>
+        <td>ボディ</td>
+        <td>show</td>
+        <td>edit</td>
+        <td>destroy</td>
+      </tr>
+    </tbody>
+  </table>
+  <div></div>
+  <h2>New book</h2>
+  <%= form_with model:@book, local:true do |f| %>
+
+    <div class="field">
+      <%= f.label :title, 'Title' %>
+      <%= f.text_field :title %>
+    </div>
+       
+    <div class="field">
+      <%= f.label :body, 'Body' %>
+      <%= f.text_area :body %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit"Create Book" %>   
+    </div>
+   
+  <% end %>
+</body>

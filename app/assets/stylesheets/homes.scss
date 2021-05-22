@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+  ackground-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -16,4 +17,8 @@ h1 {
 
 p {
   margin: 33px;
+}
+
+.field {
+  margin-bottom: 10px;
 }
