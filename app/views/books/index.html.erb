@@ -23,7 +23,11 @@
             <%= link_to 'Edit', edit_book_path(book.id) %>
           </span>
         </td>
-        <td>destroy</td>
+        <td>
+          <span>
+            <%= link_to 'Destroy', destroy_book_path(book.id),  method: :delete, "data-confirm" => "Are you sure?"%>
+          </span>
+        </td>
       </tr>
       <% end %>
     </tbody>
