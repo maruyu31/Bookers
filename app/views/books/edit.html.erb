@@ -1,10 +1,17 @@
 <p id="notice"><%= notice %></p>
 <h1>Editing Book</h1>
+
 <% if @book.errors.any? %>
-  <%= @book.errors.count %>error prohibited this book from being saved:
-  <% @book.errors.full_messages.each do |message| %>
-    <%= message %>
+<div id="error_explanation">
+  <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+    <li>
+      <%= message %>
+    </li>
   <% end %>
+  </ul>
+</div>
 <% end %>
 
 <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
